@@ -1,0 +1,393 @@
+body{
+    background: #f4f3eb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 130px;
+}
+.navbar ul li{
+
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    font-family: "Source Sans Pro", sans-serif;
+    text-decoration: none;
+    font-size: 23px;
+    margin: 15px;
+    color: white;
+    padding: 8px 25px;
+    transition: all .6s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+}
+.logo {
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    flex: 1 1 auto;
+    margin-left: 10%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 35px;
+}
+/*
+a{
+    margin: 15px;
+    font-size: 23px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Source Sans Pro", sans-serif;
+}
+a:hover{
+    color: #000;
+}
+*/
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 25;
+}
+
+#Welcome {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+}
+
+h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+}
+
+h1::before,
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+h1::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+.subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    background: hsl(49 37% 94%);
+    height: 600px;
+}
+#Aboutmefirst{
+    font-size: 60px;
+}
+#Aboutmesecond{
+    font-size: 30px;
+}
+#FinkiLink{
+    text-decoration: none;
+    color:#FB667A ;
+}
+
+
+.years { color: #2b2e4a; }
+
+.container th h2 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: #678eb4;
+}
+
+.container td {
+    font-family: "Source Sans Pro";
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+.container td, .container th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left:2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+    background-color: #a6f2db;
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+    background-color: #7bcace;
+}
+
+.container th {
+    background-color: #4f4e79;
+}
+
+.container td { color: #FB667A; }
+
+.container td:hover {
+    background-color: #FFF842;
+    color: #FB667A;
+    font-weight: bold;
+
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+    .container td:nth-child(4),
+    .container th:nth-child(4) { display: none; }
+}
+.empty{
+    pointer-events: none;
+    background-color: none;
+}
+tr:nth-of-type(4) td:nth-of-type(1) {
+    visibility: hidden;
+}
+tr:nth-of-type(5) td:nth-of-type(1) {
+    visibility: hidden;
+}
+tr:nth-of-type(5) td:nth-of-type(2) {
+    visibility: hidden;
+}
+tr:nth-of-type(6) td:nth-of-type(1) {
+    visibility: hidden;
+}
+tr:nth-of-type(6) td:nth-of-type(2) {
+    visibility: hidden;
+}
+
+#content{
+    margin-top: -100px;
+}
+
+#contact{
+    margin-left: 100px;
+    margin-top: 320px;
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url("bg2.png");
+    height: 900px;
+    width: 90%;
+    background-size: cover;
+}
+#contact #content{
+    max-width: 800px;
+    text-align: center;
+}
+#contact #content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: white;
+}
+#contact #content p{
+    font-weight: 400;
+    color: white;
+}
+.content2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#Info{
+    margin-left: -300px;
+
+}
+.content2 #Info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.content2 #Info .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.content2 #Info .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.content2 #Info .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    flex-direction: column;
+    font-weight: 400;
+}
+.content2 #Info .box .text h3{
+    font-weight: 500;
+    color: #FB667A;
+}
+#contact > div.Form{
+    margin-top: -550px;
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
+#contact > div.Form{
+    width: 40%;
+    padding: 40px;
+    background: white;
+}
+.Form > form > h2{
+    font-size: 30px;
+    color: #678eb4;
+    font-weight: 500;
+}
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.inputBox input, .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.inputBox input[type="submit"]{
+    width: 100%;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+.Links a {
+    text-decoration: none;
+    color: #FB667A;
+}
+.arrow{
+    color: #00bcd4;
+}
